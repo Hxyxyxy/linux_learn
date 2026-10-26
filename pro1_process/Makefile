@@ -52,7 +52,17 @@ fifo_write:fifo_write.c
 fifo_read:fifo_read.c
 	-$(CC) -o $@ $^
 
-shard_memory:shard_memory.c
+shared_memory:shared_memory.c
+	-$(CC) -o $@ $^
+	-./$@ "test"
+	-rm ./$@
+
+shared_memory_block:shared_memory_block.c
+	-$(CC) -o $@ $^
+	-./$@ "test"
+	-rm ./$@
+
+farther_son_mq_test:farther_son_mq_test.c
 	-$(CC) -o $@ $^
 	-./$@ "test"
 	-rm ./$@
