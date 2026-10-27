@@ -66,3 +66,14 @@ farther_son_mq_test:farther_son_mq_test.c
 	-$(CC) -o $@ $^
 	-./$@ "test"
 	-rm ./$@
+
+producer:producer.c
+	-$(CC) -o $@ $^
+
+consumer:consumer.c
+	-$(CC) -o $@ $^
+
+signal_test:signal_test.c
+	-$(CC) -o $@ $^
+	-./$@ "test"
+	-rm ./$@
