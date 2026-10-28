@@ -98,3 +98,8 @@ named_sem_count :named_sem_count.c
 	-$(CC) -o $@ $^ -lpthread
 	-./$@
 	-rm ./$@
+
+thread_pool_test :thread_pool_test.c
+	-$(CC) -o $@ $^ `pkg-config --cflags --libs glib-2.0`
+	-./$@
+	-rm ./$@
